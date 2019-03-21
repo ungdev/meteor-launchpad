@@ -21,7 +21,7 @@ ENV BUILD_SCRIPTS_DIR /opt/build_scripts
 
 # Add entrypoint and build scripts
 COPY scripts $BUILD_SCRIPTS_DIR
-RUN chmod -R 750 $BUILD_SCRIPTS_DIR
+RUN chmod -R 755 $BUILD_SCRIPTS_DIR
 
 # Define all --build-arg options
 ONBUILD ARG APT_GET_INSTALL
